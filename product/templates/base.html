@@ -1,0 +1,36 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="{% block link %}{% endblock %}">
+    <header class="d-flex justify-content-center py-3">
+
+        <div class="head_title">
+            <p>회원가입시 적립금 <strong>2000</strong>원 지급!</p>
+        </div>
+
+        <ul class="header">
+            <li class="nav-item"><a href="{% url 'home' %}" class="nav-link">Home</a></li>
+            {% if user.is_authenticated %}
+            <li class="nav-item"><a href="{% url 'logout' %}" class="nav-link">LOGOUT</a></li>
+            <li class="nav-item"><a href="{% url 'mypage' %}" class="nav-link">MY PAGE</a></li>
+            <li class="nav-item"><a href="{% url 'create' %}" class="nav-link">CREATE</a></li>
+            {% endif %}
+            <li class="nav-item"><a href="{% url 'login' %}" class="nav-link">LOGIN</a></li>
+            <li class="nav-item"><a href="{% url 'signup' %}" class="nav-link">SIGN UP</a></li>
+        </ul>
+
+        <div class="body">
+            <h1 id="title">FEEL GOOD CLOSET</h1>
+        </div>
+    
+        <hr size="3px">
+        
+    </header>
+
+{% block content %}
+{% endblock %}
+</body>
+</html>

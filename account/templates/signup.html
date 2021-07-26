@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}로그인{% endblock %}
+{% block link %} {% static 'css/signup.css' %}{% endblock %}
+
+{% block content %}
+    <p class="signup">SIGN UP</p>
+
+    <div class="content">
+        <form method="POST" action="{% url 'signup' %}" enctype="multipart/form-data">
+            {% csrf_token %}
+            <p>아이디 : <input type="text" id="username" name="username" placeholder="아이디를 입력하세요."><br></p>
+            
+            <p>프로필 이미지 : <input type="file" id="profile_img" name="profile_img" width="300" height="300" ><br></p>
+            
+            <p>대학교 : <input type="text" id="university" name="university" placeholder="재학 중인 대학교를 입력하세요."><br></p>
+            
+            <p>비밀번호 : <input type="password" id="password" name="password" placeholder="비밀번호를 입력하세요."><br></p>
+            
+            <input type="password" id="password2" name="password2" placeholder="비밀번호를 한번 더 입력하세요."><br>
+
+            <button>회원가입</button>
+        </form>
+    </div>
+{%endblock%}

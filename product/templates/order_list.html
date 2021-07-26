@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}주문목록{% endblock %}
+{% block content %}
+
+    <p>주문목록</p>
+    {% for product in result %}
+    <a href="{% url 'detail' product.id%}">
+        <div>
+            <p><img src="{{product.product_img.url}}" width="300px" height="300px"></p>
+            <p>상품 명 : {{product.product_name}}</p>
+            <p>상품 설명 : {{product.product_info}}</p>
+        </div>>
+    </a>
+    {% endfor %}
+{%endblock%}

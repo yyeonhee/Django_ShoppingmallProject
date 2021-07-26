@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}마이페이지{% endblock %}
+{% block link %} {% static 'css/mypage.css' %}{% endblock %}
+{% block content %}
+<p class="mypage">MY PAGE</p>
+<p id="info"><strong>{{user.username}}</strong>님의 정보입니다.</p><br>
+
+<img src="{{ user.profile_img.url }}" id="profile_img" width="200px" height="200px"><br>
+
+<div class="content">
+    <p id="id">아이디 : {{user.username}}</p><br>
+    <p id="university">대학교 : {{user.university}}</p><br>
+</div>
+{%endblock%}

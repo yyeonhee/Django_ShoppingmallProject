@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}상품 등록{% endblock %}
+{% block link %} {% static 'css/create.css' %}{% endblock %}
+{% block content %}
+
+    <p class="create">상품 등록하기</p>
+    <div class="content">
+        <form method="POST" action="{% url 'create' %}">
+            {% csrf_token %}
+            <p>상품 이미지 : <input id="product_img" name="product_img" type="file"></p>
+            <p>상품 명 : <input id="product_name" name="product_name" type="text" placeholder="상품 명을 입력해주세요."></p>
+            <p>상품 설명 : <input id="product_info" name="product_info" type="text" placeholder="상품 설명을 입력해주세요."></p>
+            <button>등록하기</button>
+        </form>
+    </div>
+{% endblock %}

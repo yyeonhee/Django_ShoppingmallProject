@@ -1,0 +1,40 @@
+@font-face {
+    font-family: 'NanumSquareRound';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+*{
+    font-family: 'NanumSquareRound';
+}
+
+.mypage{
+    font-size: 35px;
+    display: flex;
+    justify-content: center;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    margin-left: 48%;
+}
+
+#profile_img{
+    position: absolute;
+    display: block;
+    left: 480px;
+    top: 425px;
+}
+
+#id, #university{
+    width: 300px;
+    height: 40px;
+    font-size: 18px;
+}
+
+#info{
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+}
