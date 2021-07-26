@@ -5,7 +5,6 @@ from .models import Product
 from account.models import User, Order
 from django.core.paginator import Paginator
 
-# Create your views here.
 def home(request):
     products = Product.objects.all()
     paginator = Paginator(products, 3)

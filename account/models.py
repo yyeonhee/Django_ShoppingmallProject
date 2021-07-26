@@ -2,7 +2,6 @@ from django.db import models
 from django.contrib.auth.models import AbstractUser
 from product.models import Product
 # Create your models here.
-
 class User(AbstractUser) :
     university = models.CharField(max_length=50)
     profile_img = models.ImageField(upload_to="user/", null=True)

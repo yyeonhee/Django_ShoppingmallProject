@@ -1,7 +1,6 @@
 {% extends 'base.html' %}
 {% block title %}주문목록{% endblock %}
 {% block content %}
-
     <p>주문목록</p>
     {% for product in result %}
     <a href="{% url 'detail' product.id%}">

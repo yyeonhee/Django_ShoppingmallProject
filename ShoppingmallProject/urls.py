@@ -19,7 +19,7 @@ from django.urls.conf import include
 from django.conf import settings
 from django.conf.urls.static import static
 from product import views as P
-
+ 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', P.home, name="home"),
